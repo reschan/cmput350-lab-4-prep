@@ -33,7 +33,7 @@ public:
 
 private:
     const std::chrono::steady_clock::time_point time = std::chrono::steady_clock::now();
-     std::chrono::steady_clock::time_point since = time;
+    std::chrono::steady_clock::time_point since = time;
 };
 
 #endif  // TIMER_H

@@ -7,6 +7,7 @@
 // Expands the binary representation of input by a factor of scale.
 // e.g., expand(0b1111ull, 3) == 0b001001001001
 uint64_t expand(uint64_t input, uint32_t scale) {
+    assert(scale >= 1);
     uint64_t res = 0;
     for (int i = 0; i < 64; i++) {
         if (i * scale > 64) {
@@ -22,7 +23,7 @@ uint64_t expand(uint64_t input, uint32_t scale) {
 }
 
 int main() {
-    uint64_t res = expand(0b1, 12345);
+    uint64_t res = expand(0b1, 0);
     std::bitset<64> x(res);
     std::cout << x << '\n';
     return 0;
